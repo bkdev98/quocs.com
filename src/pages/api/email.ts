@@ -18,7 +18,7 @@ export default async function sendEmail(
       to: 'khanh@quocs.com',
       reply_to: data.email,
       subject: `${data.name} - via quocs.com`,
-      react: <EmailTemplate {...data} />,
+      react: EmailTemplate(data)
     })
 
     res.status(200).json({ message: 'Email sent' })
