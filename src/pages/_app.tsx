@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import 'remixicon/fonts/remixicon.css'
 import type { AppProps } from 'next/app'
+import { Analytics } from '@vercel/analytics/react';
 import { FC, ReactNode } from 'react'
 import CommandBar from '@/components/CommandBar'
 
@@ -12,10 +13,13 @@ export default function App({ Component, pageProps }: AppProps & {
   const Layout = Component.Layout || Noop
 
   return (
-    <CommandBar>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </CommandBar>
+    <>
+      <CommandBar>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </CommandBar>
+      <Analytics />
+    </>
   )
 }
