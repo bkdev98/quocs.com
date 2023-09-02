@@ -10,6 +10,10 @@ export default async function sendEmail(
     message: string
   }>
 ) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ message: 'Method not allowed' })
+    return
+  }
   try {
     const data = req.body
 
