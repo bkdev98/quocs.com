@@ -13,15 +13,17 @@ export default async function sendEmail(
   try {
     const data = req.body
 
-    await resend.sendEmail({
+    const result = await resend.emails.send({
       from: 'quocs.com <website@quocs.com>',
-      to: 'khanh@quocs.com',
+      to: ['khanh@quocs.com'],
       reply_to: data.email,
       subject: `${data.name} - via quocs.com`,
       react: EmailTemplate(data)
     })
 
-    res.status(200).json({ message: 'Email sent' })
+    res.status(200).json({
+      message: `Email sent successfully! ID: #${result.id}`
+    })
   } catch (e: any) {
     res.status(500).json({ message: e.message })
   }
