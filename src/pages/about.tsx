@@ -92,7 +92,7 @@ function About({ title, description, image }: {
     })
   }
 
-  const getDuration = (startDate: string, endDate: string) => {
+  const getDuration = (startDate: string, endDate?: string) => {
     const durationObj = intervalToDuration({
       start: parseISO(startDate),
       end: endDate ? parseISO(endDate) : new Date(),
