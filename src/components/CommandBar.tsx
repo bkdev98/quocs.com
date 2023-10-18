@@ -21,6 +21,7 @@ import homeIcon from '../../public/static/icons/home.json'
 import articlesIcon from '../../public/static/icons/articles.json'
 import projectsIcon from '../../public/static/icons/projects.json'
 import reminderIcon from '../../public/static/icons/reminder.json'
+import talksIcon from '../../public/static/icons/talks.json'
 
 export default function CommandBar(props: { children: React.ReactNode }) {
   const copyLinkRef = useRef<LottieRef>()
@@ -30,6 +31,7 @@ export default function CommandBar(props: { children: React.ReactNode }) {
   const aboutRef = useRef<LottieRef>()
   const projectsRef = useRef<LottieRef>()
   const reminderRef = useRef<LottieRef>()
+  const talksRef = useRef()
   const articlesRef = useRef<LottieRef>()
   const router = useRouter()
   const [showToast, setShowToast] = useState(false)
@@ -96,6 +98,15 @@ export default function CommandBar(props: { children: React.ReactNode }) {
       section: 'Go To',
       perform: () => router.push('/projects'),
       icon: <Lottie lottieRef={projectsRef as any} style={iconSize} animationData={projectsIcon} loop={false} autoplay={false} />,
+    },
+    {
+      id: 'talks',
+      name: 'Talks',
+      shortcut: ['g', 't'],
+      keywords: 'go-talks',
+      section: 'Go To',
+      perform: () => router.push('/talks'),
+      icon: <Lottie lottieRef={talksRef as any} style={iconSize} animationData={talksIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'v1',
