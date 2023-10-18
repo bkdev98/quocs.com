@@ -1,11 +1,11 @@
 const items = [
-  // {
-  //   jobTitle: 'Software Engineer',
-  //   company: 'Astroni',
-  //   companyUrl: 'https://astroni.com',
-  //   startDate: '2022-01',
-  //   location: 'Ho Chi Minh City, Vietnam',
-  // },
+  {
+    jobTitle: 'Software Engineer',
+    company: 'CoderSchool',
+    companyUrl: 'https://coderschool.vn',
+    startDate: '2023-09',
+    location: 'Ho Chi Minh City, Vietnam',
+  },
   {
     jobTitle: 'Mobile Developer',
     company: 'MoMo',
