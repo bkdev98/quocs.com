@@ -181,6 +181,24 @@ const globalStyles = globalCss({
       fontWeight: 'normal',
       fontStyle: 'italic',
     },
+    {
+      fontFamily: 'Manrope',
+      src: `url("/static/fonts/Manrope-Bold.ttf") format("truetype")`,
+      fontWeight: 'bold',
+      fontStyle: 'normal',
+    },
+    {
+      fontFamily: 'Manrope',
+      src: `url("/static/fonts/Manrope-Regular.ttf") format("truetype")`,
+      fontWeight: 'normal',
+      fontStyle: 'normal',
+    },
+    {
+      fontFamily: 'Manrope',
+      src: `url("/static/fonts/Manrope-Medium.ttf") format("truetype")`,
+      fontWeight: '500',
+      fontStyle: 'normal',
+    }
   ],
 })
 
