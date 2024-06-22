@@ -22,8 +22,8 @@ function Contact({ title, image }: {
   title: string
   image: string
 }) {
-  // const description = `Right now I'm <strong>open</strong> to new opportunities or freelance projects. Reach out and touch faith. <strong>↓</strong>`
-  const description = `I'm <strong>not available</strong> for work right now but always love a nice chat. Reach out and touch faith. <strong>↓</strong>`
+  const description = `Right now I'm <strong>open</strong> to new opportunities or freelance projects. Reach out and touch faith. <strong>↓</strong>`
+  // const description = `I'm <strong>not available</strong> for work right now but always love a nice chat. Reach out and touch faith. <strong>↓</strong>`
   const [isEmailSent, setIsEmailSent] = React.useState<boolean | undefined>(undefined)
   const [showToast, setShowToast] = React.useState(false)
 

@@ -65,7 +65,7 @@ function Talks(props: {
   }
 
   const { title, image } = props
-  const description = `I'm introverted and terrified of public speaking, but I'm always love knowledge sharing. I've done ${getTotalTalks()} talks and workshops so far, and I'm looking forward to more.`
+  const description = `Working on my communication skill while sharing things I've learned. I've done ${getTotalTalks()} talks and workshops so far, and I'm looking forward to more.`
 
   return (
     <>

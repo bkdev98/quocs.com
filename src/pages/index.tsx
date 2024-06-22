@@ -16,7 +16,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: 'Quoc Khanh',
-      description: 'Building mobile and web applications.',
+      description: 'Building polished mobile and web experiences.',
       image: '/static/images/home-bw.jpg',
     },
   }
@@ -42,7 +42,7 @@ export default function Home({ title, description, image }: Props) {
             <div>
               <h1>{title}</h1>
               <p>
-                <strong>Software Developer</strong><br />
+                <strong>Software Engineer</strong><br />
                 {description}
               </p>
               <ShortcutHome />

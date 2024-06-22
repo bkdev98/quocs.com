@@ -53,7 +53,7 @@ function About({ title, description, image }: {
             I started as a developer back in 2017 and working with Node.js ecosystem ever since. My current tech stack is <strong>Typescript, React and React Native</strong>.
           </Paragraph>
           <Paragraph>
-            I mostly worked as a software engineer at <strong>tech startups</strong>, currently at <a href="https://coderschool.vn" target="_blank"><strong style={{ color: '#C14A41' }}>CoderSchool</strong></a>.
+            I mostly worked as a software engineer at <strong>tech startups</strong>. Most recent @ <a href="https://coderschool.vn" target="_blank"><strong style={{ color: '#C14A41' }}>CoderSchool</strong></a> & <a href="https://momo.vn" target="_blank"><strong style={{ color: '#A50064' }}>MoMo</strong></a>.
           </Paragraph>
           <Paragraph>
             I&apos;m not really a perfectionist, but <strong>pixel perfect</strong> products confort my OCD soul.

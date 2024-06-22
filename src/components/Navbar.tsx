@@ -109,7 +109,7 @@ const ButtonHeader = styled('div', {
   borderRadius: '$borderRadius',
   color: 'white',
   cursor: 'pointer',
-  height: '34px',
+  height: '40px',
   padding: '0 10px',
   transition: 'background $duration ease-in-out',
   '&:hover': { background: '$hover' },
@@ -122,10 +122,10 @@ const Icon = styled('i', {
 
 const ButtonLogo = styled(ButtonHeader, {
   fontWeight: 700,
-  fontSize: '32px',
+  fontSize: '28px',
   textDecoration: 'none',
   marginLeft: '12px',
-  paddingTop: '6px',
+  // paddingTop: '6px',
   fontFamily: '$heading',
 })
 
@@ -182,7 +182,7 @@ const NavContainer = styled(motion.span, {
 
 const NavHovered = styled(motion.span, {
   position: 'absolute',
-  top: '-15px',
+  top: '-12px',
   left: '0',
   right: '0',
   background: '$hover',

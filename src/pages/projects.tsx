@@ -21,8 +21,13 @@ export async function getStaticProps() {
   ]
 
   const featuredPosts = [
+    getProjectBySlug('sixpm', featuredParams),
+    getProjectBySlug('igourmet', featuredParams),
+    // getProjectBySlug('foodwiki', featuredParams),
     getProjectBySlug('sdsp', featuredParams),
     getProjectBySlug('mimo', featuredParams),
+    getProjectBySlug('koialpha', featuredParams),
+    getProjectBySlug('innoteq-pos', featuredParams),
   ]
 
   return {
@@ -80,7 +85,7 @@ function Projects(props: {
   }
 
   const { title, image } = props
-  const description = `I'm obsessed with building <strong>softwares that matter</strong>. Here you can navigate to <strong>${props.allPosts.length} different</strong> case studies, websites, apps, and libraries I built. Some projects are still active, others have been discontinued.`
+  const description = `All I want to do is <strong>build softwares</strong>. Here you can navigate to <strong>${props.allPosts.length} different</strong> case studies, websites, apps, and libraries I built. Some projects are still active, others have been discontinued.`
 
   return (
     <>

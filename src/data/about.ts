@@ -4,6 +4,7 @@ const items = [
     company: 'CoderSchool',
     companyUrl: 'https://coderschool.vn',
     startDate: '2023-09',
+    endDate: '2024-06',
     location: 'Ho Chi Minh City, Vietnam',
   },
   {

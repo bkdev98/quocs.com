@@ -20,13 +20,14 @@ export type Talk = {
 const talks: Talk[] = [
   {
     year: '2023',
-    summary: "I'm back!",
+    summary: '',
     talks: [
       {
         title: 'CoderSchool Platform Workshop',
         date: '2023-10-04',
         where: 'Ho Chi Minh City',
         attendees: '≈10',
+        cover: '/static/images/talks/solid-react.jpeg',
         presentations: [
           {
             title: 'The SOLID Principles of React',
@@ -38,7 +39,7 @@ const talks: Talk[] = [
   },
   {
     year: '2020',
-    summary: 'And suddenly I started to give presentations...',
+    summary: '',
     talks: [
       {
         title: 'InApps Workshop: Deconstruct',

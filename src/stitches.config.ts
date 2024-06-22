@@ -26,9 +26,9 @@ export const {
       command: 'rgba(255, 255, 255, 0.05)',
     },
     fonts: {
-      body: 'Biotif, sans-serif',
+      body: 'Manrope, sans-serif',
       code: 'Fira Code, monospace',
-      heading: 'Neuzeit Grotesk Bold, sans-serif',
+      heading: 'Manrope, sans-serif',
     },
     space: {
       navHeightDesktop: '60px',
@@ -92,7 +92,7 @@ const globalStyles = globalCss({
   h1: {
     fontFamily: '$heading',
     fontSize: '48px',
-    lineHeight: '50px',
+    lineHeight: '68px',
     margin: '0 0 20px',
     color: '$primary',
   },
