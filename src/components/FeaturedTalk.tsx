@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { styled } from '../stitches.config'
+import { fadeIn, styled } from '../stitches.config'
 import { Talk } from '@/data/talks'
 
 export default function FeaturedTalk(props: {
@@ -11,7 +11,7 @@ export default function FeaturedTalk(props: {
   const { talk } = props
 
   return (
-    <Talk href={talk.presentations[0].url} target="_blank">
+    <Talk href={talk.presentations[0].url} target="_blank" style={{animation: `1s ease ${Number(props.index) * 100 + 400}ms normal both 1 ${fadeIn}`}}>
       <Animation index={props.index}>
         <Content>
           {talk.cover && <ImageContainer>

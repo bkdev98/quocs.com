@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { styled } from '@/stitches.config'
+import { fadeIn, styled } from '@/stitches.config'
 import ProjectDate from './ProjectDate'
 
 export default function ListItem(props: {
@@ -13,7 +13,7 @@ export default function ListItem(props: {
   // Internal links
   if (props.href.charAt(0) === '/') {
     return (
-      <ArticleItem>
+      <ArticleItem style={{animation: `1s ease ${Number(props.index) * 50 + 1000}ms normal both 1 ${fadeIn}`}}>
         <Link href={props.href} passHref legacyBehavior>
           <Anchor>
             <Animation index={props.index}>
@@ -30,7 +30,7 @@ export default function ListItem(props: {
 
   // External links
   return (
-    <Item>
+    <Item style={{animation: `1s ease ${Number(props.index) * 50 + 1000}ms normal both 1 ${fadeIn}`}}>
       <Anchor href={props.href} target="_blank">
         <Animation index={props.index}>
           <Title>

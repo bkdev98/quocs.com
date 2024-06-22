@@ -5,7 +5,7 @@ import { parseISO, format, intervalToDuration } from 'date-fns'
 import Base from '@/layouts/Base'
 import items from '@/data/about'
 import stripHtml from '@/utils/stripHtml'
-import { styled } from '@/stitches.config'
+import { fadeIn, styled } from '@/stitches.config'
 import profileImage from '../../public/static/images/quocs-bw.jpg'
 
 export async function getStaticProps() {
@@ -68,7 +68,7 @@ function About({ title, description, image }: {
   const renderAll = () => {
     return items.map((item, index) => {
       return (
-        <div style={{ marginBottom: 40 }} key={index}>
+        <div style={{ marginBottom: 40, animation: `1s ease ${index * 100 + 500}ms normal both 1 ${fadeIn}` }} key={index}>
           <h3>{item.jobTitle}</h3>
           <p style={{ margin: 0 }}>
             <a href={item.companyUrl} target="_blank">
@@ -123,7 +123,7 @@ function About({ title, description, image }: {
       </Head>
 
       {renderIntro()}
-      <h2>Career</h2>
+      <h2 style={{animation: `1s ease 500ms normal both 1 ${fadeIn}`}}>Career</h2>
       {renderAll()}
     </>
   )
@@ -149,6 +149,7 @@ const Section = styled('div', {
   marginTop: '0px',
   width: 'auto',
   '@bp2': { width: '48%' },
+  animation: `1s ease 200ms normal both 1 ${fadeIn}`
 })
 
 About.Layout = Base

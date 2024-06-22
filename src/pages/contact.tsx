@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Base from '@/layouts/Base'
 import Toast from '@/components/Toast'
 import { Box } from '@/components/Box'
-import { styled } from '@/stitches.config'
+import { fadeIn, styled } from '@/stitches.config'
 import stripHtml from '@/utils/stripHtml'
 
 export async function getStaticProps() {
@@ -63,9 +63,9 @@ function Contact({ title, image }: {
       </Head>
 
       <Box>
-        <p dangerouslySetInnerHTML={{ __html: description }} />
-        <h2>Send an email</h2>
-        <Form onSubmit={onSendEmail}>
+        <p dangerouslySetInnerHTML={{ __html: description }} style={{animation: `1s ease 100ms normal both 1 ${fadeIn}`}} />
+        <h2 style={{animation: `1s ease 300ms normal both 1 ${fadeIn}`}}>Send an email</h2>
+        <Form onSubmit={onSendEmail} style={{animation: `1s ease 700ms normal both 1 ${fadeIn}`}}>
           <FormGroup>
             <Label htmlFor="name">Name</Label>
             <Input id="name" type="text" placeholder="Hippopotamus" required />

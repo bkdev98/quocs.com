@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar'
 import Head from 'next/head'
 import { PostContainer, PostContent, PostMain } from '@/components/Post'
 import ShortcutHome from '@/components/ShortcutHome'
-import { styled } from '@/stitches.config'
+import { fadeIn, styled } from '@/stitches.config'
 import { Wrapper } from '@/components/Wrapper'
 import Footer from '@/components/Footer'
 
@@ -40,12 +40,14 @@ export default function Home({ title, description, image }: Props) {
         <PostContent>
           <PostContainer>
             <div>
-              <h1>{title}</h1>
-              <p>
+              <h1 style={{animation: `1s ease 0s normal both 1 ${fadeIn}`}}>{title}</h1>
+              <p style={{animation: `1s ease 100ms normal both 1 ${fadeIn}`}}>
                 <strong>Software Engineer</strong><br />
                 {description}
               </p>
-              <ShortcutHome />
+              <div style={{animation: `1s ease 500ms normal both 1 ${fadeIn}`}}>
+                <ShortcutHome />
+              </div>
             </div>
           </PostContainer>
         </PostContent>

@@ -6,6 +6,7 @@ import { Box } from '../components/Box'
 import stripHtml from '@/utils/stripHtml'
 import FeaturedTalk from '@/components/FeaturedTalk'
 import talks, { Talk } from '@/data/talks'
+import { fadeIn } from '@/stitches.config'
 
 export async function getStaticProps() {
   const meta = {
@@ -43,7 +44,7 @@ function Talks(props: {
   const renderAll = () => {
     return talks.map((item, index) => {
       return (
-        <div key={index}>
+        <div key={index} style={{animation: `1s ease ${index * 100 + 700}ms normal both 1 ${fadeIn}`}}>
           <h3>{item.year}</h3>
           <p>{item.summary}</p>
           {item.talks.map((talk, tIndex) => {
@@ -78,12 +79,12 @@ function Talks(props: {
         <meta content={`https://quocs.com${image}`} property="og:image" />
       </Head>
 
-      <p dangerouslySetInnerHTML={{ __html: description }} />
+      <p dangerouslySetInnerHTML={{ __html: description }} style={{animation: `1s ease 100ms normal both 1 ${fadeIn}`}} />
 
-      <h2>Featured Talks</h2>
+      <h2 style={{animation: `1s ease 200ms normal both 1 ${fadeIn}`}}>Featured Talks</h2>
       <Box css={{ margin: '10px 0 0 -20px' }}>{renderFeatured()}</Box>
 
-      <h2>All Talks</h2>
+      <h2 style={{animation: `1s ease 500ms normal both 1 ${fadeIn}`}}>All Talks</h2>
       {renderAll()}
     </>
   )

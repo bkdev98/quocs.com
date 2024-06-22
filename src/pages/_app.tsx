@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app'
 import { Analytics } from '@vercel/analytics/react';
 import { FC, ReactNode } from 'react'
 import CommandBar from '@/components/CommandBar'
+import { GrainWrapper, Grainy } from '@/components/Grainy';
 
 const Noop: FC<{ children: ReactNode }> = ({ children }) => children
 
@@ -20,6 +21,10 @@ export default function App({ Component, pageProps }: AppProps & {
         </Layout>
       </CommandBar>
       <Analytics />
+
+      <GrainWrapper>
+        <Grainy />
+      </GrainWrapper>
     </>
   )
 }

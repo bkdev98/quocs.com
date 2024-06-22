@@ -1,4 +1,4 @@
-import { styled } from '@/stitches.config'
+import { fadeIn, styled } from '@/stitches.config'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { PostMain, PostContent, PostContainer } from '@/components/Post'
@@ -29,6 +29,7 @@ export default function Base({ children }: {
         <PostContent>
           <PostContainer>
             <GradientTitle
+              key={title}
               css={{
                 backgroundImage: `linear-gradient(
                 135deg,
@@ -56,4 +57,5 @@ const GradientTitle = styled('h1', {
   WebkitTextFillColor: 'transparent',
   MozTextFillColor: 'transparent',
   WebkitBoxDecorationBreak: 'clone',
+  animation: `1s ease 0s normal both 1 ${fadeIn}`
 })

@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config'
+import { fadeIn, styled } from '../stitches.config'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ProjectDate from '../components/ProjectDate'
@@ -19,17 +19,18 @@ export default function ProjectLayout({ children }: {
       <Navbar />
       <Main image={image}>
         {image && (
-          <ProjectHeader>
-            <ProjectHeaderTitle>{title}</ProjectHeaderTitle>
+          <ProjectHeader style={{animation: `1s ease 100ms normal both 1 ${fadeIn}`}}> 
+            <ProjectHeaderTitle style={{animation: `1s ease 300ms normal both 1 ${fadeIn}`}}>{title}</ProjectHeaderTitle>
             <ProjectImage
               css={image ? { backgroundImage: `url(${image})` } : {}}
             />
-            <ProjectHeaderSubtitle>
+            <ProjectHeaderSubtitle style={{animation: `1s ease 500ms normal both 1 ${fadeIn}`}}>
               <ProjectDate dateString={date} />
             </ProjectHeaderSubtitle>
           </ProjectHeader>
         )}
         <PostContent
+          style={{animation: `1s ease 500ms normal both 1 ${fadeIn}`}}
           css={{
             '& ::selection': {
               background: '#ff80bf',

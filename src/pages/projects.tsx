@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { styled } from '@/stitches.config'
+import { fadeIn, styled } from '@/stitches.config'
 import Base from '@/layouts/Base'
 import ListItem from '@/components/ListItem'
 import FeaturedProject from '@/components/FeaturedProject'
@@ -98,12 +98,12 @@ function Projects(props: {
         <meta content={`https://quocs.com${image}`} property="og:image" />
       </Head>
 
-      <p dangerouslySetInnerHTML={{ __html: description }} />
+      <p dangerouslySetInnerHTML={{ __html: description }} style={{animation: `1s ease 200ms normal both 1 ${fadeIn}`}} />
 
-      <h2>Featured Projects</h2>
+      <h2 style={{animation: `1s ease 300ms normal both 1 ${fadeIn}`}}>Featured Projects</h2>
       <FeaturedProjects>{renderFeatured()}</FeaturedProjects>
 
-      <h2>All Projects</h2>
+      <h2 style={{animation: `1s ease 1000ms normal both 1 ${fadeIn}`}}>All Projects</h2>
       <ListGroup>{renderAll()}</ListGroup>
     </>
   )

@@ -1,7 +1,8 @@
-import { styled } from '../stitches.config'
+import { fadeIn, styled } from '../stitches.config'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ProjectDate from './ProjectDate'
+import Link from 'next/link'
 
 export default function FeaturedProject(props: {
   index: string
@@ -12,7 +13,7 @@ export default function FeaturedProject(props: {
   date: string
 }) {
   return (
-    <Project href={props.href}>
+    <Project href={props.href} style={{animation: `1s ease ${Number(props.index) * 50 + 300}ms normal both 1 ${fadeIn}`}}>
       <Animation index={props.index}>
         <Container>
           <ImageContainer css={{ backgroundImage: `url(${props.image})` }} />
@@ -56,7 +57,7 @@ function Animation(props: {
   )
 }
 
-const Project = styled('a', {
+const Project = styled(Link, {
   border: '0',
   width: '370px',
   textDecoration: 'none',
