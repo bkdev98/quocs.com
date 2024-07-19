@@ -23,10 +23,10 @@ export async function getStaticProps() {
   const featuredPosts = [
     getProjectBySlug('sixpm', featuredParams),
     getProjectBySlug('igourmet', featuredParams),
-    // getProjectBySlug('foodwiki', featuredParams),
+    getProjectBySlug('crossroads', featuredParams),
     getProjectBySlug('sdsp', featuredParams),
     getProjectBySlug('mimo', featuredParams),
-    getProjectBySlug('koialpha', featuredParams),
+    // getProjectBySlug('koialpha', featuredParams),
     getProjectBySlug('innoteq-pos', featuredParams),
   ]
 
