@@ -19,3 +19,5 @@ date: "2024-02"
     <figcaption class="side-by-side-caption">Mentor session</figcaption>
   </figure>
 </div>
+
+<a href="https://platform.coderschool.vn/v2/crossroads/courses/game-development/try" target="_blank">Try now</a>
