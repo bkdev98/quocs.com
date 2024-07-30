@@ -12,7 +12,7 @@ date: "2022-11-11"
   </figure>
   <figure>
     <img alt="My Network" src="/static/images/projects/mimo-2.png" class="side-by-side-img">
-    <figcaption class="side-by-side-caption">Toco Toco - Product</figcaption>
+    <figcaption class="side-by-side-caption">ToCoToCo - Product</figcaption>
   </figure>
   <figure>
     <img alt="Card Scanner" src="/static/images/projects/mimo-3.png" class="side-by-side-img">
